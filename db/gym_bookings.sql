@@ -17,5 +17,5 @@ CREATE TABLE members (
 CREATE TABLE bookings (
   id SERIAL PRIMARY KEY,
   session_id INT REFERENCES sessions(id),
-  member_id INT REFERENCES members(id),
+  member_id INT REFERENCES members(id)
   );
