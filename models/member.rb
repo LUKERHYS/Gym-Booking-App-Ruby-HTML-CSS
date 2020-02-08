@@ -10,3 +10,16 @@ class Member
     @last_name = options['last_name']
     @goal = options['goal']
 end
+
+  def save()
+    sql = "INSERT INTO members WHERE (
+    first_name, last_name, goal
+    ) VALUES (
+      $1, $2, $3
+      ) RETURNING id"
+    values = [@first_name, @last_name, @goal]
+    results = SqlRunner.run(sql, values)
+    @id = results[0]['id'].to_i()
+  end
+
+end

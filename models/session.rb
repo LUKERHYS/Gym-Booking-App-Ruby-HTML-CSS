@@ -10,3 +10,5 @@ class Session
     @trainer = options['trainer']
     @room = options['room']
 end
+
+end
