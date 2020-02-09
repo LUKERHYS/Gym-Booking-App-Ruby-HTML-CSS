@@ -21,6 +21,20 @@ member1.save()
 member2.save()
 
 
+session1 = Session.new({
+  "type" => "strength"
+  "trainer" => "John"
+  "room" => 2
+  })
+session2 = Session.new({
+  "type" => "weight loss"
+  "trainer" => "Malcolm"
+  "room" => 3
+  })
+  session1.save()
+  session2.save()
+
+
 
 binding.pry
 nil

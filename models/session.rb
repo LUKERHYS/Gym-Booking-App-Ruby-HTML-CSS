@@ -8,7 +8,7 @@ class Session
     @id = options['id'].to_i() if options['id']
     @type = options['type']
     @trainer = options['trainer']
-    @room = options['room']
+    @room = options['room'].to_i()
 end
 
   def save()
@@ -20,6 +20,15 @@ end
     values = [@type, @trainer, @room]
     results = SqlRunner.run(sql, values)
     @id = results[0]['ids'].to_i()
+  end
+
+  def update()
+    sql = "UPDATE sessions SET (
+    type, trainer, room
+    ) = (
+      $1, $2, $3
+    ) WHERE id = $4"
+    values = [@type, @trainer, @room, @id]
   end
 
   def self.all()
