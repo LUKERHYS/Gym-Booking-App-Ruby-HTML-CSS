@@ -22,4 +22,9 @@ end
     @id = results[0]['ids'].to_i()
   end
 
+  def self.delete_all
+    sql = "DELETE FROM sessions"
+    SqlRunner.run(sql)
+  end
+
 end
