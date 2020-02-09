@@ -11,4 +11,15 @@ class Session
     @room = options['room']
 end
 
+  def save()
+    sql = "INSERT INTO sessions WHERE (
+    type, trainer, room
+    ) VALUES (
+      $1, $2, $3
+      ) RETURNING id"
+    values = [@type, @trainer, @room]
+    results = SqlRunner.run(sql, values)
+    @id = results[0]['id'].to_i()
+  end
+
 end
