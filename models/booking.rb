@@ -9,5 +9,15 @@ class Booking
     @session_id = options['session_id'].to_i()
 end
 
+  def save()
+    sql = "INSERT INTO bookings WHERE (
+    member_id, session_id
+    ) VALUES (
+      $1, $2
+      ) RETURNING id"
+    values = [@member_id, @session_id]
+    results = SqlRunner.run(sql, values)
+    @id = results[0]['id'].to_i()
+  end
 
 end
