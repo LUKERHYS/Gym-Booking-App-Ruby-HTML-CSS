@@ -29,11 +29,14 @@ end
       $1, $2, $3
     ) WHERE id = $4"
     values = [@type, @trainer, @room, @id]
+    SqlRunner.run(sql, values)
   end
 
   def self.all()
     sql = "SELECT * FROM sessions"
-    SqlRunner.run(sql)
+    sessions = SqlRunner.run(sql)
+    result = sessions.map{|session| Session.new(session)}
+    return result
   end
 
   def self.delete_all()

@@ -20,6 +20,16 @@ end
     @id = results[0]['id'].to_i()
   end
 
+  def update()
+    sql = "UPDATE bookings SET (
+    member_id, session_id
+    ) = (
+      $1, $2,
+    ) WHERE id = $4"
+    values = [@member_id, @session_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM bookings"
     SqlRunner.run(sqlb)

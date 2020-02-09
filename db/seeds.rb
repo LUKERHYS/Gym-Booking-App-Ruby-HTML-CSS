@@ -22,19 +22,24 @@ member2.save()
 
 
 session1 = Session.new({
-  "type" => "strength"
-  "trainer" => "John"
+  "type" => "strength",
+  "trainer" => "John",
   "room" => 2
   })
 session2 = Session.new({
-  "type" => "weight loss"
-  "trainer" => "Malcolm"
+  "type" => "weight loss",
+  "trainer" => "Malcolm",
   "room" => 3
   })
   session1.save()
   session2.save()
 
 
+booking1 = Booking.new({
+  "member_id" => member1.id,
+  "session_id" => session1.id,
+  })
+booking1.save()
 
 binding.pry
 nil
