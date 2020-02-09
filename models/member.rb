@@ -22,13 +22,15 @@ end
     @id = results[0]['id'].to_i()
   end
 
-  # def update()
-  #   sql = "INSERT INTO members (
-  #   $1, $2, $3,
-  #   ) WHERE (
-  #
-  #     )"
-  # end
+  def update()
+    sql = "UPDATE members SET (
+    first_name, last_name, goal
+    ) = (
+      $1, $2, $3
+      ) WHERE id = $4"
+    values = [@first_name, @last_name, @goal, @id]
+    SqlRunner.run(sql, values)
+  end
 
   def self.all()
     sql = "SELECT * FROM members"
