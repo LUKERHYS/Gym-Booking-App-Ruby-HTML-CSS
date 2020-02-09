@@ -10,7 +10,7 @@ class Booking
 end
 
   def save()
-    sql = "INSERT INTO bookings WHERE (
+    sql = "INSERT INTO bookings (
     member_id, session_id
     ) VALUES (
       $1, $2

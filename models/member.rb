@@ -12,7 +12,7 @@ class Member
 end
 
   def save()
-    sql = "INSERT INTO members WHERE (
+    sql = "INSERT INTO members (
     first_name, last_name, goal
     ) VALUES (
       $1, $2, $3
@@ -22,11 +22,13 @@ end
     @id = results[0]['id'].to_i()
   end
 
-  def update()
-    sql = "INSERT INTO members WHERE (
-    $1, $2, $3,
-    )"
-  end
+  # def update()
+  #   sql = "INSERT INTO members (
+  #   $1, $2, $3,
+  #   ) WHERE (
+  #
+  #     )"
+  # end
 
   def self.all()
     sql = "SELECT * FROM members"

@@ -12,7 +12,7 @@ class Session
 end
 
   def save()
-    sql = "INSERT INTO sessions WHERE (
+    sql = "INSERT INTO sessions (
     type, trainer, room
     ) VALUES (
       $1, $2, $3
