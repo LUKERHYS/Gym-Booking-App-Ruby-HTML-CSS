@@ -19,3 +19,7 @@ member2 = Member.new({
   })
 member1.save()
 member2.save()
+
+
+binding.pry
+nil
