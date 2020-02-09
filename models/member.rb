@@ -22,6 +22,16 @@ end
     @id = results[0]['id'].to_i()
   end
 
+  def update()
+    sql = "INSERT INTO members WHERE (
+    $1, $2, $3,
+    )"
+  end
+
+  def self.all()
+    sql = "SELECT * FROM members"
+    SqlRunner.run(sql)
+  end
 
   def self.delete_all()
     sql = "DELETE FROM members"
