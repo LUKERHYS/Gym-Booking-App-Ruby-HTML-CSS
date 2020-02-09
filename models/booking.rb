@@ -32,7 +32,7 @@ end
 
   def self.all()
     sql = "SELECT * FROM bookings"
-    SqlRunner.run(sqlb)
+    SqlRunner.run(sql)
   end
 
   def self.delete_all()
