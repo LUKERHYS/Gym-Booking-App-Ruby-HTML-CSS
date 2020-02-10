@@ -19,7 +19,7 @@ end
       ) RETURNING id"
     values = [@type, @trainer, @room]
     results = SqlRunner.run(sql, values)
-    @id = results[0]['ids'].to_i()
+    @id = results[0]['id'].to_i()
   end
 
   def update()

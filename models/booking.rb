@@ -1,7 +1,8 @@
 require_relative('../db/sql_runner')
 
 class Booking
-  attr_reader :id, :member_id, :session_id
+  attr_accessor :member_id, :session_id
+  attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i() if options['id']
@@ -14,7 +15,7 @@ end
     member_id, session_id
     ) VALUES (
       $1, $2
-      ) RETURNING id"
+        ) RETURNING id"
     values = [@member_id, @session_id]
     results = SqlRunner.run(sql, values)
     @id = results[0]['id'].to_i()
