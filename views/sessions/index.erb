@@ -1,1 +1,16 @@
-<h1>Welcome</h1>
+<div class="member-container">
+
+  <% for session in @sessions %>
+  <div class="member-child">
+    <a class="member-name" href="/sessions/<%= session.id %>"></a>
+    <p>Type: <%= session.type %></p>
+    <p>Trainer: <%= session.trainer %></p>
+    <p>Room: <%= session.room %></p>
+  </div>
+
+  <% end %>
+  <div class="member-child">
+    <a href="/session/new">New Session</a>
+  </div>
+
+</div>

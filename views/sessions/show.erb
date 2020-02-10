@@ -1,0 +1,15 @@
+<div class="show-container">
+  <div class="show-child">
+
+    <h1><%= @session.first_name %> <%= @session.last_name %></h1>
+    <h3>Goal: <%= @session.goal %></h3>
+
+    <a href="/sessions/<%= @session.id %>/edit" class="edit">Edit details</a>
+
+    <form   action="/sessions/<%= @session.id %>/delete" method="post">
+      <input class="delete"  type="submit" value="Delete">
+    </form>
+
+
+  </div>
+</div>
