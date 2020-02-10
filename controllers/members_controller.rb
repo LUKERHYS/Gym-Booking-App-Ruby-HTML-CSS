@@ -31,12 +31,12 @@ end
 
 post "/members/:id" do
   member = Member.new(params)
-  member.update
+  member.update()
   redirect to '/members'
 end
 
 post "/members/:id/delete" do
   member = Member.find(params['id'])
-  member.delete
+  member.delete()
   redirect to '/members'
 end

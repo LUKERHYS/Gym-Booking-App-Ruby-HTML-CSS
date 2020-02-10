@@ -3,14 +3,13 @@
   <% for session in @sessions %>
   <div class="member-child">
     <a class="member-name" href="/sessions/<%= session.id %>"></a>
-    <p>Type: <%= session.type %></p>
-    <p>Trainer: <%= session.trainer %></p>
-    <p>Room: <%= session.room %></p>
+    <a href="/sessions/<%= session.id %>"><h2>Type: </h2></a><p><%= session.type %></p>
+    <h2>Trainer: </h2><p><%= session.trainer %></p>
+    <h2>Room: </h2><p><%= session.room %></p>
   </div>
-
   <% end %>
   <div class="member-child">
-    <a href="/session/new">New Session</a>
+    <a class="edit" href="/sessions/new">New Session</a>
   </div>
 
 </div>

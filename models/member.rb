@@ -9,7 +9,7 @@ class Member
     @first_name = options['first_name']
     @last_name = options['last_name']
     @goal = options['goal']
-end
+  end
 
   def save()
     sql = "INSERT INTO members (

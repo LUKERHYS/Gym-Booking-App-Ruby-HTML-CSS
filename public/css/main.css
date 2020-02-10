@@ -93,6 +93,10 @@ input {
   font-size: 18px;
 }
 
+.edit a {
+  margin-top: 15px;
+}
+
 .delete {
   background: red;
   border-radius: 6px;

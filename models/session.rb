@@ -9,7 +9,7 @@ class Session
     @type = options['type']
     @trainer = options['trainer']
     @room = options['room'].to_i()
-end
+  end
 
   def save()
     sql = "INSERT INTO sessions (
@@ -30,6 +30,20 @@ end
     ) WHERE id = $4"
     values = [@type, @trainer, @room, @id]
     SqlRunner.run(sql, values)
+  end
+
+  def delete()
+    sql = "DELETE FROM sessions WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM sessions WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values).first()
+    session = Session.new(results)
+    return session
   end
 
   def self.all()

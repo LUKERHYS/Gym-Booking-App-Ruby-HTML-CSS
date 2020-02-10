@@ -1,0 +1,30 @@
+<form action="/sessions/<%= @session.id %>" method="post">
+  <div class="form-container">
+
+    <div class="form-child">
+      <label for="type">Type: </label>
+    </div>
+    <div class="form-child">
+      <input type="text" name="type" id="type" value="<%= @session.type %>">
+    </div>
+
+    <div class="form-child">
+      <label for="trainer">Trainer: </label>
+    </div>
+    <div class="form-child">
+      <input type="text" name="trainer" id="trainer" value="<%= @session.trainer %>">
+    </div>
+
+    <div class="form-child">
+      <label for="room">Room: </label>
+    </div>
+    <div class="form-child">
+      <input type="text" name="room" id="room" value="<%= @session.room %>">
+    </div>
+
+    <div class="form-child">
+      <input type="submit" value="Update Session"/>
+    </div>
+
+  </div>
+</form>
