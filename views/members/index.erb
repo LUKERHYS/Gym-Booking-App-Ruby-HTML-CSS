@@ -1,0 +1,10 @@
+<div class="member-container">
+  <% @members.each do |member| %>
+
+  <div class="member-child">
+    <a href="/members/<%= member.id %>"><h3><%= member.first_name %> <%= member.last_name %></h3></a>
+    <p>Goal: <%= member.goal %></p>
+  </div>
+
+  <% end %>
+</div>

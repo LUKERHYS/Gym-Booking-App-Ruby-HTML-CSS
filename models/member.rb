@@ -32,6 +32,14 @@ end
     SqlRunner.run(sql, values)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM members WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values).first()
+    member = Member.new(member)
+    return member
+  end
+
   def self.all()
     sql = "SELECT * FROM members"
     members = SqlRunner.run(sql)
