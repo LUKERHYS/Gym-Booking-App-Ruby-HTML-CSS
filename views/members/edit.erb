@@ -1,0 +1,30 @@
+<form class="" action="/members" method="post">
+  <div class="form-container">
+
+    <div class="form-child">
+      <label for="first_name">First Name: </label>
+    </div>
+    <div class="form-child">
+      <input type="text" name="first_name" id="first_name" value="<%= @member.first_name %>"/>
+    </div>
+
+    <div class="form-child">
+      <label for="last_name">Last Name: </label>
+    </div>
+    <div class="form-child">
+      <input type="text" name="last_name" id="last_name" value="<%= @member.last_name %>">
+    </div>
+
+    <div class="form-child">
+      <label for="goal">Goal: </label>
+    </div>
+    <div class="form-child">
+      <input type="text" name="goal" id="goal" value="<%= @member.goal %>">
+    </div>
+
+    <div class="form-child">
+      <input type="submit" value="Update"/>
+    </div>
+
+  </div>
+</form>

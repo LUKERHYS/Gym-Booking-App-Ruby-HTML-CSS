@@ -21,7 +21,7 @@ nav a {
   border-left: solid black 2px;
   padding-left: 3%;
 }
-a:hover {
+nav a:hover {
   color: #EDE200;
 }
 
@@ -42,11 +42,64 @@ a:hover {
   /* border: solid red ; */
 }
 
-.member-child a {
+.member-show-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 10%;
+}
+.member-show-child {
+  align-items: center;
+  width: 50%;
+  border: solid red ;
+}
+
+.form-container {
+/* border: solid red ; */
+width: 75%;
+display: flex;
+}
+.form-child {
+  /* border: solid red ; */
+  width: 33%;
+}
+label {
+  font-size: 30px;
+  color: #424242;
+}
+input {
+  font-size: 25px;
+  width: 75%;
+}
+
+/* BUTTONS */
+.member-name {
   text-decoration: none;
   color: #424242;
   font-size: 20px;
 }
-.member-child a:hover {
+.member-name :hover {
   color: #EDE200;
+}
+
+.edit {
+  background-color: dodgerblue;
+  text-decoration: none;
+  color: #fff;
+  padding: 7px;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(176,173,176,1);
+  font-size: 18px;
+}
+
+.delete {
+  background: red;
+  border-radius: 6px;
+  padding: 1%;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 20px;
+  box-shadow: 0px 3px 5px 0px rgba(176,173,176,1);
+  max-width: 13%;
 }

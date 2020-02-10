@@ -32,11 +32,18 @@ end
     SqlRunner.run(sql, values)
   end
 
+  def delete()
+    sql = "DELETE FROM members
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.find(id)
     sql = "SELECT * FROM members WHERE id = $1"
     values = [id]
     results = SqlRunner.run(sql, values).first()
-    member = Member.new(member)
+    member = Member.new(results)
     return member
   end
 
