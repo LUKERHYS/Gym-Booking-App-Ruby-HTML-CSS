@@ -1,4 +1,15 @@
-<% for booking in @bookings %>
-<%= booking %>
-<% end %>
-<hr>
+<div class="member-container">
+  <ul>
+    <% for booking in @bookings %>
+    <li>
+    <a href="/bookings/<%= booking.id %>"><p><%= booking.member.first_name %></p></a>
+    <p>
+     <%= booking.session.type %> </p>
+
+
+    </li>
+    <% end %>
+  </ul>
+  <a class="new" href="/bookings/new">New Booking</a>
+
+</div>

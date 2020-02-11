@@ -31,9 +31,36 @@ end
     SqlRunner.run(sql, values)
   end
 
+  def member()
+    sql = "SELECT * FROM members
+    WHERE id = $1"
+    values = [@member_id]
+    results = SqlRunner.run(sql, values)
+    return Member.new(results.first)
+  end
+
+  def session()
+    sql = "SELECT * FROM sessions
+    WHERE id = $1"
+    values = [@session_id]
+    results = SqlRunner.run(sql, values)
+    return Session.new(results.first)
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM bookings
+    WHERE_id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    booking = Booking.new(results)
+    return booking
+  end
+
   def self.all()
     sql = "SELECT * FROM bookings"
-    SqlRunner.run(sql)
+    results = SqlRunner.run(sql)
+    bookings = results.map{|result| Booking.new(result)}
+    return bookings
   end
 
   def self.delete_all()

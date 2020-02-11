@@ -1,0 +1,12 @@
+
+<div>
+
+    <p><%= @booking.member.first_name %></p>
+    <p><%= @booking.session.type %> </p>
+    
+
+
+<form action="/bookings/<%= booking.id %>/delete" method="POST">
+  <input class="btn btn--danger" type="submit" value="delete" />
+</form>
+</div>
