@@ -1,5 +1,6 @@
-<form class="" action="/bookings/<%= @booking.id %>" method="post">
-  <div class="form-container">
+<div class="form-container">
+<form action="/bookings/<%= @booking.id %>" method="post">
+  <h1>Edit Booking</h1>
 
     <div class="form-child">
       <label for="member_id">Member: </label>
@@ -34,7 +35,7 @@
     </div>
 
     <div class="form-child">
-      <input type="submit" value="Update Session"/>
+      <input class="edit" type="submit" value="Update Session"/>
     </div>
 
   </div>

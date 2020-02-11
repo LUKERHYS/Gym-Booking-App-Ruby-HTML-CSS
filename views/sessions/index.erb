@@ -1,15 +1,18 @@
-<div class="member-container">
+<div class="index-container">
 
-  <% for session in @sessions %>
-  <div class="member-child">
-    <a class="member-name" href="/sessions/<%= session.id %>"></a>
-    <a href="/sessions/<%= session.id %>"><h2>Type: </h2></a><p><%= session.type %></p>
-    <h2>Trainer: </h2><p><%= session.trainer %></p>
-    <h2>Room: </h2><p><%= session.room %></p>
-  </div>
-  <% end %>
-  <div class="member-child">
-    <a class="edit" href="/sessions/new">New Session</a>
-  </div>
+    <% for session in @sessions %>
+      <div class="index-child">
+        <a class="member-name" href="/sessions/<%= session.id %>"></a>
+        <a href="/sessions/<%= session.id() %>">
+          <h1><u>Session <%= session.id() %></u></h1>
+        </a>
+          <p><b>Type: </b><%= session.type() %></p>
+          <p><b>Trainer: </b><%= session.trainer() %></p>
+          <p><b>Room: </b><%= session.room() %></p>
+      </div>
+    <% end %>
+      <div class="index-child">
+        <a class="new" href="/sessions/new">New Session</a>
+      </div>
 
 </div>

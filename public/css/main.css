@@ -1,20 +1,25 @@
+/* Google fonts */
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
+/* Global */
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
 }
-
 nav {
-  width: 100%;
-  padding: 2% 5%;
   display: inline-flex;
+  width: 100%;
   background-color:  #424242;
   box-shadow: 0px 10px 7px -1px rgba(0,0,0,0.35);
 }
-
-nav a {
+a {
   text-decoration: none;
+  color: dodgerblue;
+}
+a :hover {
+  color: #EDE200;
+}
+nav a {
   color: #fff;
   margin: 2%;
   font-size: 30px;
@@ -24,53 +29,55 @@ nav a {
 nav a:hover {
   color: #EDE200;
 }
-
-
-/* MEMBERS */
-.member-container {
+h1 {
+  color: #424242;
+  text-decoration: underline;
+}
+h2, h3 {
+  color: #424242;
+}
+/* INDEX ERB */
+.index-container {
   display: flex;
   width: 100%;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-
-.member-child {
-  width: 10%;
+.index-child {
+  width: 20%;
   padding: 1% 2%;
   margin: 1%;
   border-right: solid #424242 1px;
-  /* border: solid red ; */
 }
 
+/* SHOW_ERB */
 .show-container {
-  display: flex;
+  display: inline-flex;
   width: 100%;
   justify-content: center;
-  flex-wrap: wrap;
   padding-top: 10%;
 }
 .show-child {
-  align-items: center;
-  width: 50%;
-  /* border: solid red ; */
+  width: 25%;
 }
 
+/* FORMS */
 .form-container {
-/* border: solid red ; */
-width: 75%;
-display: flex;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 5%;
 }
 .form-child {
-  /* border: solid red ; */
-  width: 33%;
+  width: 100%;
+  padding: 10% 0;
 }
 label {
   font-size: 30px;
   color: #424242;
 }
-input {
+input, select {
   font-size: 25px;
-  width: 75%;
 }
 
 /* BUTTONS */
@@ -82,7 +89,23 @@ input {
 .member-name :hover {
   color: #EDE200;
 }
-
+.new, .add {
+  text-decoration: none;
+  color: #fff;
+  padding: 7px;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(176,173,176,1);
+  font-size: 18px;
+}
+.new, .add a {
+  margin-top: 15px;
+}
+.new {
+  background-color: orange;
+}
+.add {
+  background-color: lightgreen;
+}
 .edit {
   background-color: dodgerblue;
   text-decoration: none;
@@ -92,18 +115,15 @@ input {
   box-shadow: 0px 3px 5px 0px rgba(176,173,176,1);
   font-size: 18px;
 }
-
 .edit a {
   margin-top: 15px;
 }
-
 .delete {
   background: red;
   border-radius: 6px;
-  padding: 1%;
+  padding: 2% 6%;
   font-size: 18px;
   color: #fff;
   margin-top: 20px;
   box-shadow: 0px 3px 5px 0px rgba(176,173,176,1);
-  max-width: 13%;
 }

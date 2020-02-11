@@ -1,6 +1,6 @@
+<div class="form-container">
 <form action="/sessions/<%= @session.id %>" method="post">
-  <div class="form-container">
-
+  <h1>Edit Session</h1>
     <div class="form-child">
       <label for="type">Type: </label>
     </div>
@@ -23,8 +23,7 @@
     </div>
 
     <div class="form-child">
-      <input type="submit" value="Update Session"/>
+      <input class="edit" type="submit" value="Update Session"/>
     </div>
-
+    </form>
   </div>
-</form>

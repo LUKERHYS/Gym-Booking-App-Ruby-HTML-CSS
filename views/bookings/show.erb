@@ -1,13 +1,11 @@
-
-<div>
-
-    <p><%= @booking.member.first_name %></p>
-    <p><%= @booking.session.type %> </p>
-
-
-<a href="/bookings/<%= @booking.id %>/edit">Edit Booking</a>
-
-<form action="/bookings/<%= @booking.id %>/delete" method="POST">
-  <input class="btn btn--danger" type="submit" value="delete" />
-</form>
+<div class="show-container">
+  <div class="show-child">
+    <h3><b>Member: </b><%= @booking.member.first_name %></h3>
+    <h3><b>Session: </b><%= @booking.session.type %> </h3>
+</div>
+<div class="show-child">
+    <a class="edit" href="/bookings/<%= @booking.id %>/edit">Edit Booking</a>
+    <form action="/bookings/<%= @booking.id %>/delete" method="POST">
+      <input class="delete" class="btn btn--danger" type="submit" value="delete" />
+    </form>
 </div>

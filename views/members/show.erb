@@ -1,11 +1,11 @@
 <div class="show-container">
   <div class="show-child">
 
-    <h1><%= @member.first_name %> <%= @member.last_name %></h1>
-    <h3>Goal: <%= @member.goal %></h3>
-
+    <h2><%= @member.first_name %> <%= @member.last_name %></h2>
+    <h3><b>Goal: </b><%= @member.goal %></h3>
+  </div>
+<div class="show-child">
     <a href="/members/<%= @member.id %>/edit" class="edit">Edit details</a>
-
     <form   action="/members/<%= @member.id %>/delete" method="post">
       <input class="delete"  type="submit" value="Delete">
     </form>

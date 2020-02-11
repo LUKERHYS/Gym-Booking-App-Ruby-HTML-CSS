@@ -1,5 +1,6 @@
-<form class="" action="/members/<%= @member.id %>" method="post">
-  <div class="form-container">
+<div class="form-container">
+<form action="/members/<%= @member.id %>" method="post">
+  <h1>Edit Member</h1>
 
     <div class="form-child">
       <label for="first_name">First Name: </label>
@@ -23,7 +24,7 @@
     </div>
 
     <div class="form-child">
-      <input type="submit" value="Update"/>
+      <input class="edit" type="submit" value="Update"/>
     </div>
 
   </div>
