@@ -11,6 +11,11 @@ get "/bookings" do
   erb( :"bookings/index" )
 end
 
+get "/bookings/list_view" do
+  @bookings = Booking.all()
+  erb( :"bookings/list" )
+end
+
 get "/bookings/new" do
   @members = Member.all()
   @sessions = Session.all()

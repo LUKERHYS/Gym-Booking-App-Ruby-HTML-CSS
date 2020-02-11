@@ -1,10 +1,9 @@
 <div class="index-container">
-
     <% for session in @sessions %>
       <div class="index-child">
         <a class="member-name" href="/sessions/<%= session.id %>"></a>
         <a href="/sessions/<%= session.id() %>">
-          <h1><u>Session <%= session.id() %></u></h1>
+          <h1><u> <%= session.type() %></u></h1>
         </a>
           <p><b>Type: </b><%= session.type() %></p>
           <p><b>Trainer: </b><%= session.trainer() %></p>

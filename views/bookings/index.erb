@@ -1,5 +1,4 @@
 <div class="index-container">
-
   <% for booking in @bookings %>
   <div class="index-child">
     <a href="/bookings/<%= booking.id() %>">
@@ -11,6 +10,7 @@
     <% end %>
     <div class="index-child">
     <a class="new" href="/bookings/new">New Booking</a>
+    <a class="new" href="/bookings/list_view">List</a>
   </div>
 
 </div>
