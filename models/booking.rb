@@ -25,8 +25,8 @@ end
     sql = "UPDATE bookings SET (
     member_id, session_id
     ) = (
-      $1, $2,
-    ) WHERE id = $4"
+      $1, $2
+    ) WHERE id = $3"
     values = [@member_id, @session_id, @id]
     SqlRunner.run(sql, values)
   end

@@ -35,8 +35,7 @@ get "/bookings/:id/edit" do
 end
 
 post "/bookings/:id" do
-  booking = Booking.new(params)
-  booking.update()
+  update_booking = Booking.new(params).update()
   redirect to '/bookings'
 end
 
