@@ -49,9 +49,9 @@ end
 
   def self.find(id)
     sql = "SELECT * FROM bookings
-    WHERE_id = $1"
+    WHERE id = $1"
     values = [id]
-    results = SqlRunner.run(sql, values)
+    results = SqlRunner.run(sql, values).first()
     booking = Booking.new(results)
     return booking
   end

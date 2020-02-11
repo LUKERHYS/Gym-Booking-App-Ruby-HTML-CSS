@@ -26,3 +26,7 @@ get "/bookings/:id" do
   @booking = Booking.find(params['id'])
   erb(:"/bookings/show")
 end
+
+get "/bookings/:id/edit" do
+  @booking = Booking.find(params['id'])\erb(:"bookings/edit")
+end
