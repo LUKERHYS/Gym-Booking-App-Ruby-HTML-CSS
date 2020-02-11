@@ -31,6 +31,12 @@ end
     SqlRunner.run(sql, values)
   end
 
+  def delete()
+    sql = "DELETE FROM bookings WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def member()
     sql = "SELECT * FROM members
     WHERE id = $1"

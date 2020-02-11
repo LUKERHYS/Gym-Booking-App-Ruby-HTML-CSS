@@ -1,0 +1,41 @@
+<form class="" action="/bookings/<%= @booking.id %>" method="post">
+  <div class="form-container">
+
+    <div class="form-child">
+      <label for="member_id">Member: </label>
+    </div>
+    <div class="form-child">
+      <select type="text" name="member_id" id="member_id" selected="<%= @booking.id %>">
+        <% for member in @members %>
+        <% if member.id == @booking.member_id() %>
+        <option value="<%= member.id() %>" selected><%= member.first_name() %></option>
+        <% else %>
+        <option value="<%= member.id() %>"><%= member.first_name() %></option>
+            <% end %>
+            <% end %>
+        </select>
+
+    </div>
+
+
+    <div class="form-child">
+      <label for="session_id">Session: </label>
+    </div>
+    <div class="form-child">
+      <select type="text" name="session_id" id="session_id" selected="<%= @booking.id %>">
+        <% for session in @sessions %>
+        <% if session.id == @booking.session_id() %>
+      <option value="<%= session.id() %>" selected ><%= session.type() %></option>
+      <% else %>
+      <option value="<%= session.id() %>"><%= session.type() %></option>
+      <% end %>
+      <% end %>
+      </select>
+    </div>
+
+    <div class="form-child">
+      <input type="submit" value="Update Session"/>
+    </div>
+
+  </div>
+</form>
