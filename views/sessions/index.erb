@@ -7,6 +7,7 @@
         </a>
           <p><b>Type: </b><%= session.type() %></p>
           <p><b>Trainer: </b><%= session.trainer() %></p>
+          <p><b>Attendees: </b><%= session.members.count() %></p>
           <p><b>Room: </b><%= session.room() %></p>
       </div>
     <% end %>
