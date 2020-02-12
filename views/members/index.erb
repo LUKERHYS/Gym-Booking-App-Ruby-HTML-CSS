@@ -4,6 +4,7 @@
   <div class="index-child">
     <a class="member-name" href="/members/<%= member.id %>"><h3><%= member.first_name %> <%= member.last_name %></h3></a>
     <p><b>Goal: </b><%= member.goal %></p>
+    <p><b>Sessions booked: </b><%= member.sessions.count() %></p>
   </div>
 
   <% end %>

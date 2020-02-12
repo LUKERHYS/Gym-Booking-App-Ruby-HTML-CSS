@@ -2,7 +2,11 @@
   <div class="show-child">
 
     <h2><%= @member.first_name %> <%= @member.last_name %></h2>
-    <h3><b>Goal: </b><%= @member.goal %></h3>
+    <h3><b>Goal: </b><%= @member.goal() %></h3>
+    <h3><b>Sessions Booked: </b></h3>
+    <% for session in @member.sessions() %>
+    <h3>> <%= session.type() %></h3>
+    <% end %>
   </div>
 <div class="show-child">
     <a href="/members/<%= @member.id %>/edit" class="edit">Edit details</a>

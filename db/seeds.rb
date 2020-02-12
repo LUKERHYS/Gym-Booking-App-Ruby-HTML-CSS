@@ -9,30 +9,54 @@ Session.delete_all()
 
 member1 = Member.new({
   "first_name" => "Luke",
-  "last_name" => "melvin",
-  "goal" => "weight loss"
+  "last_name" => "Melvin",
+  "goal" => "Weight loss"
   })
 member2 = Member.new({
   "first_name" => "Adam",
   "last_name" => "Reed",
+  "goal" => "Strength"
+  })
+member3 = Member.new({
+  "first_name" => "Lyndsey",
+  "last_name" => "Fraser",
+  "goal" => "Cardio fitness"
+  })
+member4 = Member.new({
+  "first_name" => "Hollie",
+  "last_name" => "Davidson",
   "goal" => "strength"
   })
 member1.save()
 member2.save()
+member3.save()
+member4.save()
 
 
 session1 = Session.new({
-  "type" => "strength",
-  "trainer" => "John",
-  "room" => 2
+  "type" => "HIIT",
+  "trainer" => "Mark",
+  "room" => 1
   })
 session2 = Session.new({
-  "type" => "weight loss",
-  "trainer" => "Malcolm",
+  "type" => "AB Blast",
+  "trainer" => "Mathew",
+  "room" => 2
+  })
+session3 = Session.new({
+  "type" => "Free Weights",
+  "trainer" => "Katie",
+  "room" => 1
+  })
+session4 = Session.new({
+  "type" => "PiYo",
+  "trainer" => "Katie",
   "room" => 3
   })
   session1.save()
   session2.save()
+  session3.save()
+  session4.save()
 
 
 booking1 = Booking.new({
