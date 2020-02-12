@@ -4,6 +4,10 @@
     <h3><b>Type: </b><%= @session.type %> </h3>
     <h3><b>Trainer: </b><%= @session.trainer %></h3>
     <h3><b>Room: </b><%= @session.room %></h3>
+    <h3><b>Members: </b></h3>
+    <% for member in @session.members %>
+    <h3><%= member.first_name %></h3>
+    <% end %>
     </div>
 <div class="show-child">
     <a href="/sessions/<%= @session.id %>/edit" class="edit">Edit details</a>

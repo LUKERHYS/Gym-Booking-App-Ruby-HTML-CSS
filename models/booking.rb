@@ -73,5 +73,4 @@ end
     sql = "DELETE FROM bookings"
     SqlRunner.run(sql)
   end
-
 end
