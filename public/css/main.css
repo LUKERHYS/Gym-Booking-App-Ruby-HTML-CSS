@@ -6,9 +6,7 @@ body, html {
   margin: 0;
   font-family: 'Raleway', sans-serif;
   height: 100%;
-  margin: 0;
 }
-
 nav {
   display: inline-flex;
   width: 100%;
@@ -47,7 +45,6 @@ h2, h3 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity:
 }
 img {
   opacity: 0.5;
@@ -63,7 +60,6 @@ img {
   text-align: center;
   color: #000;
 }
-
 .header {
   text-decoration: none;
   background-color: #111;
@@ -99,6 +95,28 @@ img {
   padding: 1% 2%;
   margin: 1%;
   border-right: solid #424242 1px;
+}
+
+/* TABLE FOR LIST ERB */
+.table-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.table-child {
+  width: 20%;
+  padding: 1% 2%;
+  margin: 1%;
+}
+.row {
+  width: 75%;
+  /* border: solid red 1px; */
+}
+.field {
+  padding: 0 10%;
+  font-size: 25px;
 }
 
 /* SHOW_ERB */

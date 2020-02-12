@@ -1,19 +1,17 @@
-<div class="index-container">
+<div class="table-container">
   <% for booking in @bookings %>
-    <table class="">
+    <table class="row">
       <tr>
-        <th class=""><a href="/bookings/<%= booking.id() %>"><h1>Booking <%= booking.id() %></h1></a></th>
-        <th class=""><%= booking.member().first_name() %></th>
-        <th class=""><%= booking.session().type() %></th>
-        <th class="">3/10</th>
-        <th class=""></th>
+        <th class="field"><h4><%= booking.session().type() %></h4></th>
+        <th class="field"><h4>Date</h4></th>
+        <th class="field"><h4>Session Name</h4></th>
+        <th class="field"><h4>3/10</h4></th>
+        <th class="field"><h4>Time</h4></th>
       </tr>
     </table>
     <% end %>
-    <div class="index-child">
-    <a class="new" href="/bookings/new">New Booking</a>
-    <a class="new" href="/bookings">Grid</a>
-
+    <div class="table-child">
+      <a class="new" href="/bookings/new">New Booking</a>
+      <a class="new" href="/bookings">Grid</a>
   </div>
-
 </div>
