@@ -1,7 +1,5 @@
 # Gym Booking App
 
-### A full CRUD application built with Ruby, Sinatra, PSQL, HTML & CSS. This application used a custom restAPI API to serve data from a Postgres SQL database to a Ruby/Sinatra front end.
-
 A local gym has asked you to build a piece of software to help them to manage memberships, and register members for classes.
 
 ## MVP
@@ -17,3 +15,7 @@ A local gym has asked you to build a piece of software to help them to manage me
 I completed all of mvp and then spent what time I had left making sure that the app looked as though MVP was complete.
 I felt as though a more polished looking application that fulfils MVP was better than a rushed set of extensions that
 feel unusable and unfinished.
+
+## Summary
+
+### A full CRUD application built with Ruby, Sinatra, PSQL, HTML & CSS. This application used a custom restAPI API to serve data from a Postgres SQL database to a Ruby/Sinatra front end.
