@@ -18,4 +18,4 @@ feel unusable and unfinished.
 
 ## Summary
 
-### A full CRUD application built with Ruby, Sinatra, PSQL, HTML & CSS. This application used a custom restAPI API to serve data from a Postgres SQL database to a Ruby/Sinatra front end.
+A full CRUD application built with Ruby, Sinatra, PSQL, HTML & CSS. This application used a custom restAPI API to serve data from a Postgres SQL database to a Ruby/Sinatra front end.
