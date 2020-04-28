@@ -6,11 +6,11 @@ A local gym has asked you to build a piece of software to help them to manage me
 
 ## MVP
 
--The app should allow the gym to create / edit / delete members
--The app should allow the gym to create / edit / delete classes
--The app should allow the gym to add members to specific classes
--The app should show a list of all upcoming classes
--The app should show all members that are registered for a particular class
+* The app should allow the gym to create / edit / delete members
+* The app should allow the gym to create / edit / delete classes
+* The app should allow the gym to add members to specific classes
+* The app should show a list of all upcoming classes
+* The app should show all members that are registered for a particular class
 
 ## Where did I get to?
 
