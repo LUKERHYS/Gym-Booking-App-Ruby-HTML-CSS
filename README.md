@@ -1,6 +1,7 @@
 # Gym Booking App
 
-## A full crud application built with Ruby, Sinatra, PSQL, HTML & CSS.
+### A full CRUD application built with Ruby, Sinatra, PSQL, HTML & CSS. This application used a custom restAPI API to serve
+data from a Postgres SQL database to a Ruby/Sinatra front end.
 
 A local gym has asked you to build a piece of software to help them to manage memberships, and register members for classes.
 
